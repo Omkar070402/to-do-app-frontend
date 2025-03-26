@@ -38,7 +38,7 @@ const Signup = () => {
                 <div className="col-md-12">
 
                     <div className="d-flex align-items-center justify-content-center vh-100" style={{ fontFamily: "monospace" }}>
-                        <div className="w-50 signup-card shadow-lg p-4 rounded">
+                        <div className="card signup-card shadow-lg p-4 rounded">
                             <h3 className="text-center mb-3">Sign-up</h3>
 
                             <form className='d-flex flex-column gap-3' onSubmit={(e) => handleSubmit(e)}>
