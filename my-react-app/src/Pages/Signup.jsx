@@ -38,7 +38,7 @@ const Signup = () => {
                 <div className="col-md-12">
 
                     <div className="d-flex align-items-center justify-content-center vh-100" style={{ fontFamily: "monospace" }}>
-                        <div className="card signup-card shadow-lg p-4 rounded">
+                        <div className="card signup-card shadow-lg p-5 rounded">
                             <h3 className="text-center mb-3">Sign-up</h3>
 
                             <form className='d-flex flex-column gap-3' onSubmit={(e) => handleSubmit(e)}>
@@ -57,7 +57,7 @@ const Signup = () => {
                                     <input type="password" placeholder='Enter password' name='password' value={data.password} onChange={(e) => handleData(e)} className='form-control' />
                                 </div>
 
-                                <div className='d-flex justify-content-between'>
+                                <div className='d-flex justify-content-between gap-5'>
                                     <p className="text-primary">Already have an account?</p>
                                     <NavLink to={'/login'} className='text-decoration-none'>Login</NavLink>
                                 </div>
