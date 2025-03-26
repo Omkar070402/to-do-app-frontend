@@ -1,0 +1,36 @@
+.card-body {
+    font-family: monospace;
+    text-transform: capitalize;
+}
+
+.card-body #date {
+    font-size: 15px;
+    font-weight: 100;
+
+
+}
+
+.task-heading {
+    font-family: "Boldonse", system-ui;
+
+}
+
+.para {
+    font-family: monospace;
+}
+
+.card-img {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.5)),
+        url('../assets/download.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    padding: 0px;
+
+
+}
+
+.task-card{
+    height: 100% !important;
+}

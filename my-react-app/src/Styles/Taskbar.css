@@ -1,0 +1,16 @@
+#taskbar{
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+
+.task-form{
+    background-image: url('../assets/to-do-bg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    
+}
