@@ -6,7 +6,7 @@ import { toast } from 'react-toastify';
 const Login = () => {
   const [data, setData] = useState({ email: '', password: '' })
   const nav = useNavigate()
-  const API_BASE_URL = import.meta.env.REACT_APP_BACKEND_URL
+  const API_BASE_URL = import.meta.env.VITE_APP_BACKEND_URL
   const handleData = (e) => {
     const { name, value } = e.target;
     setData({ ...data, [name]: value })

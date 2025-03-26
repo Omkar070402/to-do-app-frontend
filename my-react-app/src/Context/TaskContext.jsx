@@ -7,7 +7,7 @@ export const TaskProvider = ({ children }) => {
 
     const [task, setTask] = useState([])
 
-    const API_BASE_URL = import.meta.env.REACT_APP_BACKEND_URL
+    const API_BASE_URL = import.meta.env.VITE_APP_BACKEND_URL
 
     const getAuthHeaders = () => {
         const token = localStorage.getItem("token");
