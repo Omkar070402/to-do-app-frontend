@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import '../Styles/Login.css'
 
 const Login = () => {
   const [data, setData] = useState({ email: '', password: '' })
@@ -43,29 +44,33 @@ const Login = () => {
         <div className="col-md-12">
           <div className="container">
 
-            <div className="d-flex align-items-center justify-content-center vh-100" style={{ fontFamily: "monospace" }}>
-              <div className="w-50 shadow-lg p-4 rounded">
+            <div className="d-flex align-items-center justify-content-center vh-100 " style={{ fontFamily: "monospace" }}>
+              <div className="card login-card shadow-lg p-4 rounded">
                 <h3 className="text-center mb-3">Login</h3>
 
-                <form className='d-flex flex-column gap-3' onSubmit={(e) => handleSubmit(e)} >
-                  <div>
-                    <label>Email:</label>
-                    <input type="email" placeholder='Enter email' name='email' value={data.email} onChange={(e) => handleData(e)} className='form-control' />
-                  </div>
+                <div className="card-body">
 
-                  <div>
-                    <label>Password:</label>
-                    <input type="password" placeholder='Enter password' name='password' value={data.password} onChange={(e) => handleData(e)} className='form-control' />
-                  </div>
-                  <div className='d-flex justify-content-between'>
-                    <p className="text-primary">Forgot Password?</p>
-                    <p className="text-primary">Don't have an account? <NavLink to={'/signup'} className='text-decoration-none'>Signup</NavLink></p>
-                  </div>
+                  <form className='d-flex flex-column gap-3' onSubmit={(e) => handleSubmit(e)} >
+                    <div>
+                      <label>Email:</label>
+                      <input type="email" placeholder='Enter email' name='email' value={data.email} onChange={(e) => handleData(e)} className='form-control' />
+                    </div>
 
-                  <div className='text-center'>
-                    <button className='btn btn-dark px-4 fw-bold'>Login</button>
-                  </div>
-                </form>
+                    <div>
+                      <label>Password:</label>
+                      <input type="password" placeholder='Enter password' name='password' value={data.password} onChange={(e) => handleData(e)} className='form-control' />
+                    </div>
+                    <div className='d-flex justify-content-around gap-5'>
+                      <p className="text-primary login-para">Forgot Password?</p>
+                      <p className="text-primary login-para">Don't have an account? <NavLink to={'/signup'} className='text-decoration-none'>Signup</NavLink></p>
+                    </div>
+
+                    <div className='text-center'>
+                      <button className='btn btn-dark px-4 fw-bold'>Login</button>
+                    </div>
+                  </form>
+
+                </div>
               </div>
             </div>
 

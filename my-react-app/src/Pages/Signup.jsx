@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import axios from 'axios'
 import { toast } from 'react-toastify'
+import '../Styles/Signup.css'
 
 const Signup = () => {
     const [data, setData] = useState({ name: '', password: '', email: '' })
@@ -32,37 +33,46 @@ const Signup = () => {
     }
 
     return (
-        <div className="d-flex align-items-center justify-content-center vh-100" style={{ fontFamily: "monospace" }}>
-            <div className="w-50 shadow-lg p-4 rounded">
-                <h3 className="text-center mb-3">Sign-up</h3>
+        <div className="container-fluid">
+            <div className="row">
+                <div className="col-md-12">
 
-                <form className='d-flex flex-column gap-3' onSubmit={(e) => handleSubmit(e)}>
-                    <div>
-                        <label>Name:</label>
-                        <input type="text" placeholder='Enter name' name='name' value={data.name} onChange={(e) => handleData(e)} className='form-control' />
+                    <div className="d-flex align-items-center justify-content-center vh-100" style={{ fontFamily: "monospace" }}>
+                        <div className="w-50 signup-card shadow-lg p-4 rounded">
+                            <h3 className="text-center mb-3">Sign-up</h3>
+
+                            <form className='d-flex flex-column gap-3' onSubmit={(e) => handleSubmit(e)}>
+                                <div>
+                                    <label>Name:</label>
+                                    <input type="text" placeholder='Enter name' name='name' value={data.name} onChange={(e) => handleData(e)} className='form-control' />
+                                </div>
+
+                                <div>
+                                    <label htmlFor="">Email :</label>
+                                    <input type="email" placeholder='Enter email' name='email' value={data.email} onChange={(e) => handleData(e)} className='form-control' />
+                                </div>
+
+                                <div>
+                                    <label>Password:</label>
+                                    <input type="password" placeholder='Enter password' name='password' value={data.password} onChange={(e) => handleData(e)} className='form-control' />
+                                </div>
+
+                                <div className='d-flex justify-content-between'>
+                                    <p className="text-primary">Already have an account?</p>
+                                    <NavLink to={'/login'} className='text-decoration-none'>Login</NavLink>
+                                </div>
+
+                                <div className='text-center'>
+                                    <button className='btn btn-dark px-4 fw-bold'>Signup</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
 
-                    <div>
-                        <label htmlFor="">Email :</label>
-                        <input type="email" placeholder='Enter email' name='email' value={data.email} onChange={(e) => handleData(e)} className='form-control' />
-                    </div>
-
-                    <div>
-                        <label>Password:</label>
-                        <input type="password" placeholder='Enter password' name='password' value={data.password} onChange={(e) => handleData(e)} className='form-control' />
-                    </div>
-
-                    <div className='d-flex justify-content-between'>
-                        <p className="text-primary">Already have an account?</p>
-                        <NavLink to={'/login'} className='text-decoration-none'>Login</NavLink>
-                    </div>
-
-                    <div className='text-center'>
-                        <button className='btn btn-dark px-4 fw-bold'>Signup</button>
-                    </div>
-                </form>
+                </div>
             </div>
         </div>
+
     )
 }
 
