@@ -51,6 +51,7 @@ const Taskbar = () => {
                             <div>
                                 <label htmlFor="">Priority</label>
                                 <select name="priority" id="" onChange={(e) => handleData(e)} className='form-control mt-3'>
+                                    <option value="">Select</option>
                                     <option value="Low">Low</option>
                                     <option value="Medium">Medium</option>
                                     <option value="High">High</option>

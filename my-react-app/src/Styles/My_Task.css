@@ -34,3 +34,16 @@
 .task-card{
     height: 100% !important;
 }
+
+@media (max-width: 576px) {
+    
+  
+        .task-card {
+            width: 90% !important; /* Make it responsive */
+            max-width: 350px !important; /* Set a reasonable max width */
+            height: auto !important; /* Adjust height automatically */
+            padding: 20px !important; /* Add padding for better UI */
+        }
+    
+    
+  }
